@@ -8,7 +8,11 @@ class UserRegister(BaseModel):
     email: EmailStr
     password: str = Field(..., min_length=8)
     full_name: str = Field(..., min_length=2)
-    
+
+
+class UserRoleUpdate(BaseModel):
+    role: UserRole
+
 
 class UserLogin(BaseModel):
     email: EmailStr
